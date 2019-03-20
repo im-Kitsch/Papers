@@ -1,0 +1,28 @@
+\documentclass{article}
+%\documentclass[smallextended]
+
+\usepackage{graphicx}
+\usepackage{xcolor} % added by Zhiyuan
+\usepackage{amsfonts} % added by ZHiyuan
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{multicol}
+\usepackage{frame}
+\usepackage{wrapfig}
+\newcommand\vecPhi {\vec{\Phi}}
+\begin{document}
+\begin{align}
+ \Phi \omega \approx R + \gamma  P^\pi  \Phi \omega\\ 
+ Q^\pi = R + \gamma P^\pi Q^\pi \\
+ Q(s, a) = \omega^T \phi (s, a) \\
+ Q(s, a) = \sum_{i=1}^k \phi_i (s, a) \omega_i\\
+ V^\pi(s) = \sum_a \pi(s, a) \sum_{s'} P_{ss'}^a [R_{ss'}^a + \gamma V^{\pi}(s')] \\
+ \Phi^T ( \Phi - \gamma P^\pi \Phi) \omega^\pi = \Phi^T R \\
+ \delta_t = \min_c \Vert \sum_{j=1}^{\vert Dic_{t-1} \vert} c_j\phi(x_j) - \phi(x) \Vert^2 \le \mu
+\\
+c_t = K_{t-1}^{-1} k_{t-1}(x) \\
+\delta_t = k(x, x) - k_{t-1}^T(x) c_t
+\end{align}
+
+\end{document}
